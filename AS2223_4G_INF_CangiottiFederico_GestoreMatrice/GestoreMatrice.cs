@@ -47,6 +47,15 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// <param name="maxValue"></param>
         public void CaricaMatrice(int minValue, int maxValue)
         {
+            Random rand = new Random();
+
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    mat[i, j] = rand.Next(minValue, maxValue + 1);
+                }
+            }
         }
 
         /// <summary>
