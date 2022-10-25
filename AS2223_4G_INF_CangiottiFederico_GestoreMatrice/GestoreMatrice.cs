@@ -78,6 +78,23 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// </summary>
         public void StampaCornice()
         {
+            for (int i = 0; i < mat.GetLength(0) - 1; i++)
+            {
+                Console.WriteLine(mat[i, 0]);
+            }
+            for (int i = 0; i < mat.GetLength(1) - 1; i++)
+            {
+                Console.WriteLine(mat[mat.GetLength(0) - 1, i]);
+            }
+
+            for (int i = mat.GetLength(0) - 1; i > 0; i--)
+            {
+                Console.WriteLine(mat[i, mat.GetLength(1) - 1]);
+            }
+            for (int i = mat.GetLength(1) - 1; i > 0; i--)
+            {
+                Console.WriteLine(mat[0, i]);
+            }
         }
 
         /// <summary>
