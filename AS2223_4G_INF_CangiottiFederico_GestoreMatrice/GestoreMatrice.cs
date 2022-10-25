@@ -120,6 +120,17 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         public int ContaValore(int valoreDaCercare)
         {
             int nValori = 0;
+            
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    if (mat[i, j] == valoreDaCercare)
+                    {
+                        nValori++;
+                    }
+                }
+            }
 
             return nValori;
         }
