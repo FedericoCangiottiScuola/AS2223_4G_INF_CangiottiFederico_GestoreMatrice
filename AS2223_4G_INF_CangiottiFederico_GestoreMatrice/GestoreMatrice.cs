@@ -143,7 +143,27 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         public double CalcolaMinMaxMedio(ref int min, ref int max)
         {
             double medio = 0;
-            
+            int somma = 0;
+            min = mat[0, 0];
+
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    somma += mat[i, j];
+
+                    if (mat[i, j] < min)
+                    {
+                        min = mat[i, j];
+                    }
+
+                    if (mat[i, j] > max)
+                    {
+                        max = mat[i, j];
+                    }
+                }
+            }
+            medio = (float)somma / (mat.GetLength(0) * mat.GetLength(1));
 
             return medio;
         }
