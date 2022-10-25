@@ -20,6 +20,7 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// <param name="lato"></param>
         public GestoreMatrice(int lato)
         {
+            mat = new int[lato, lato];
         }
 
         /// <summary>
