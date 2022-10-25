@@ -29,6 +29,15 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// <param name="mat"></param>
         public GestoreMatrice(int[,] mat)
         {
+            this.mat = new int[mat.GetLength(0), mat.GetLength(1)];
+
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    this.mat[i, j] = mat[i, j];
+                }
+            }
         }
 
         /// <summary>
