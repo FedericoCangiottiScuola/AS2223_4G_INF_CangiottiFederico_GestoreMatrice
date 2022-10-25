@@ -176,7 +176,7 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// <returns></returns>
         public int GetValue(int riga, int colonna)
         {
-            return 0;
+            return mat[riga, colonna];
         }
     }
 }
