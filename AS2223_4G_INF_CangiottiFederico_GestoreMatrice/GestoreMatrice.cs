@@ -103,6 +103,13 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// <returns></returns>
         public void InvertiPrimaUltimaColonna()
         {
+            int temp;
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                temp = mat[i, 0];
+                mat[i, 0] = mat[i, mat.GetLength(1) - 1];
+                mat[i, mat.GetLength(1) - 1] = temp;
+            }
         }
 
         /// <summary>
