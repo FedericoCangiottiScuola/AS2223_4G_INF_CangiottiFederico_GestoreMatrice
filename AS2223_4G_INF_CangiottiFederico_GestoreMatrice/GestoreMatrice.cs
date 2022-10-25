@@ -63,6 +63,14 @@ namespace AS2223_4G_INF_CangiottiFederico_GestoreMatrice
         /// </summary>
         public void StampaMatrice()
         {
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    Console.Write($"{mat[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
